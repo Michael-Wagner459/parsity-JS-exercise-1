@@ -49,10 +49,10 @@ var Vehicle = function (x, y, speed, gas) {
 };
 
 Vehicle.prototype.move = function () {
-  if (this.has > 0) {
+  if (this.gas > 0) {
   this.x = this.x + this.speed * this.randomStep();
   this.y = this.y + this.speed * this.randomStep();
-  this.gas -+ 1;
+  this.gas -= 1;
   } else {
     console.log('Sorry! We\'re all out of gas!');
   }
